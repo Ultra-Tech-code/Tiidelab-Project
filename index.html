@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <div id="container">
+    <div id="header">
+        <div id="logo">
+            <img src="asset/tiidelab-logo.jpeg" alt="logo">
+        </div>
+        <div>
+            <h1>Student Registration Form</h1>
+            <p>Fill out the form to apply for the training courses. You can consider your application accepted after you receive a confirmation email.</p>
+
+        </div>
+    </div>
+
+    <div id="main-content">
+        <form id="studentRegForm" action="successpage.html" method="POST">  
+            <fieldset>  
+                <legend>Student Information</legend>   
+                <input type="text" name="firstname" id="fname" placeholder="First Name" class="name"> 
+                
+                 <input type="text" name="middlename" id="mname" placeholder="Middle Name">
+
+                 <input type="text" name="lastname" id="lname" placeholder="Last Name"> <br>
+
+                <input type="text" name="DOB" id="dbirth" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')" class="extendedWidth">
+
+                <input type="number" name="studentid" id="studentid" placeholder="Student ID" class="extendedWidth"> 
+
+             </fieldset> 
+             <br> 
+
+            <fieldset> 
+                <legend>Address</legend>   
+                <input type="text" name="address" id="address" placeholder="Street Address" id="address">  </br>
+
+                 <input type="text" name="city" id="city" placeholder="City" class="extendedWidth">
+
+                 <input type="text" name="state" id="state" placeholder="State / Province" class="extendedWidth">  <br>
+
+                 <input type="text" name="country" id="country" placeholder="Country" class="extendedWidth">
+
+                 <input type="number" name="zip" id="zip" placeholder="Zip Code" class="extendedWidth">   
+             </fieldset>  
+             <br>
+
+             <fieldset>  
+                <legend>Contact Information</legend>   
+                <input type="email" name="email" id="email" placeholder="E mail" class="extendedWidth"> 
+                
+                 <input type="text" name="" placeholder="" class="extendedWidth">
+             </fieldset> 
+             <br>
+
+             <fieldset>  
+                <legend  class="required">Courses <span class="required-field"></span></legend>  
+
+                <div id="uploadLabelContainer">
+                    <input type="file" name="file" id="file"  onchange="return fileValidation()"> 
+                    <label for="file" id="uploadLabel"> + Add new record </label> 
+                    <br>
+                    
+                    <div class="dropdown-container">
+
+                    <div class="dropdownDiv">
+                    <select name="Courses" id="courses" required>
+                        <option value="">Courses</option>
+                        <option value="frontEnd">FrontEnd Engineering</option>
+                        <option value="backEnd">BackEnd Engineering</option>
+                        <option value="fullStack">FullStack Engineering</option>
+                    </select>
+                    </div>
+
+                    <div class="dropdownDiv">
+                    <select name="level" id="level" required>
+                        <option value="">Level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermidiate">Intermidiate</option>
+                        <option value="proficient">Proficient</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                    </div>
+
+                    <div class="dropdownDiv">
+                    <select name="languages" id="lang" required>
+                        <option value="">Language</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="java">Java</option>
+                    </select>
+                    </div>
+
+                    <div class="dropdownDiv">
+                    <select name="startdate" id="startdate" required>
+                        <option value="">Start Date</option>
+                        <option value="fifth">5th of June</option>
+                        <option value="tenth">10th of June</option>
+                        <option value="fifteenth">15th of June</option>
+                        <option value="twentieth">20th of June</option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+             </fieldset> 
+
+            <div class="Commentwrapper">
+                <textarea id="comment" name="w3review" rows="5" cols="30" placeholder=" Comments"></textarea>
+            </div>
+            <input type="submit" id="submit" value="SEND REQUEST">
+         </form>  
+    </div>
+ 
+</div>  
+</body>
+<script src="script.js"></script>
+</html>
